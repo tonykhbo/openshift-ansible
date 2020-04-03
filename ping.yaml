@@ -6,7 +6,7 @@
 
   tasks:
     - name: ping
-      command: ping google.com
+      command: ping -c 4 google.com
       register: response
 
     - debug:
