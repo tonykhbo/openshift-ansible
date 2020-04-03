@@ -2,7 +2,6 @@
 - name: Ping
   hosts: localhost
   gather_facts: false
-  connection: local
 
   tasks:
     - name: ping
