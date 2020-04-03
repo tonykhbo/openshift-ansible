@@ -59,5 +59,5 @@ RUN chmod -R 777 ${HOME} /etc/passwd /etc/group
 
 USER node
 
-Expose 22
+EXPOSE 22
 ENTRYPOINT ["bash", "/entrypoint.sh"]
