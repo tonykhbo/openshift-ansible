@@ -3,7 +3,7 @@
   gather_facts: false
   connection: local
 
-  task:
+  tasks:
     - name: Query information about all organizations associated to the user
       meraki_organization:
         auth_key: "{{ auth_key }}"
