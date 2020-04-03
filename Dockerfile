@@ -11,6 +11,8 @@ ENV HOME=/home/
 RUN yum install -y --disableplugin=subscription-manager https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum install -y --disableplugin=subscription-manager nodejs sshpass
 
+RUN echo 'root:Docker!' | chpasswd
+
 RUN	pip install --upgrade pip && \
     pip install --no-cache-dir virtualenv && \
     pip install --upgrade setuptools && \
@@ -57,4 +59,5 @@ RUN chmod -R 777 ${HOME} /etc/passwd /etc/group
 
 USER node
 
+Expose 22
 ENTRYPOINT ["bash", "/entrypoint.sh"]
