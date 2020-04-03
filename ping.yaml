@@ -5,8 +5,8 @@
   connection: local
 
   tasks:
-    - name: oc create user
-      command: "ping google.com"
+    - name: ping
+      command: "ping 172.30.37.184"
       register: response
 
     - debug:
