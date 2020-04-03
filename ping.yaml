@@ -1,8 +1,9 @@
 ---
 - name: Ping
+  hosts: localhost
   gather_facts: false
   connection: local
-  
+
   tasks:
     - name: oc create user
       command: "ping google.com"
