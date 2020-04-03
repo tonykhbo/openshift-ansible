@@ -6,6 +6,6 @@
   task:
     - name: Query information about all organizations associated to the user
       meraki_organization:
-        auth_key: {{ auth_key }}
+        auth_key: "{{ auth_key }}"
         state: query
       delegate_to: localhost
