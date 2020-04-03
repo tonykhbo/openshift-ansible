@@ -1,0 +1,10 @@
+---
+- name: Test
+  gather_facts: false
+  tasks:
+    - name: Ping
+      command: "ping google.com"
+      register: response
+
+    - debug:
+        msg: "{{ response.stdout_lines }}"
