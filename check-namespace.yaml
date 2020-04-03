@@ -10,10 +10,3 @@
 
     - debug:
         msg: "{{ response.stdout_lines }}"
-
-    - name: Show Projects
-      command: "oc projects"
-      register: response
-
-    - debug:
-        msg: "{{ response.stdout_lines }}"
