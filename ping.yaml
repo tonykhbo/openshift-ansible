@@ -1,8 +1,10 @@
 ---
-- name: Test
+- name: Ping
   gather_facts: false
+  connection: local
+  
   tasks:
-    - name: Ping
+    - name: oc create user
       command: "ping google.com"
       register: response
 
